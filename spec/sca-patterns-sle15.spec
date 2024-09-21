@@ -21,7 +21,7 @@
 %define category SLE
 
 Name:         sca-patterns-sle15
-Version:      1.5.7
+Version:      1.5.8
 Release:      0
 Summary:      Supportconfig Analysis Patterns for SLE15
 License:      GPL-2.0
@@ -33,7 +33,7 @@ Requires:     sca-patterns-base >= 1.5.0
 Buildarch:    noarch
 
 %description
-Supportconfig Analysis (SCA) appliance patterns to identify known
+Supportconfig Analysis (SCA) patterns to identify known
 issues relating to all versions of SLE15. 
 
 See %{_docdir}/sca-patterns-base/COPYING.GPLv2
@@ -53,6 +53,7 @@ install -d %{buildroot}/%{patdir}/%{category}/sle15sp2
 install -d %{buildroot}/%{patdir}/%{category}/sle15sp3
 install -d %{buildroot}/%{patdir}/%{category}/sle15sp4
 install -d %{buildroot}/%{patdir}/%{category}/sle15sp5
+install -d %{buildroot}/%{patdir}/%{category}/sle15sp6
 install -m %{patmode} patterns/%{category}/sle15all/* %{buildroot}/%{patdir}/%{category}/sle15all
 install -m %{patmode} patterns/%{category}/sle15sp0/* %{buildroot}/%{patdir}/%{category}/sle15sp0
 install -m %{patmode} patterns/%{category}/sle15sp1/* %{buildroot}/%{patdir}/%{category}/sle15sp1
@@ -60,6 +61,7 @@ install -m %{patmode} patterns/%{category}/sle15sp2/* %{buildroot}/%{patdir}/%{c
 install -m %{patmode} patterns/%{category}/sle15sp3/* %{buildroot}/%{patdir}/%{category}/sle15sp3
 install -m %{patmode} patterns/%{category}/sle15sp4/* %{buildroot}/%{patdir}/%{category}/sle15sp4
 install -m %{patmode} patterns/%{category}/sle15sp5/* %{buildroot}/%{patdir}/%{category}/sle15sp5
+install -m %{patmode} patterns/%{category}/sle15sp5/* %{buildroot}/%{patdir}/%{category}/sle15sp6
 %fdupes %{buildroot}
 
 %files
@@ -74,6 +76,7 @@ install -m %{patmode} patterns/%{category}/sle15sp5/* %{buildroot}/%{patdir}/%{c
 %dir %{patdir}/%{category}/sle15sp3
 %dir %{patdir}/%{category}/sle15sp4
 %dir %{patdir}/%{category}/sle15sp5
+%dir %{patdir}/%{category}/sle15sp6
 %attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15all/*
 %attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15sp0/*
 %attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15sp1/*
@@ -81,6 +84,7 @@ install -m %{patmode} patterns/%{category}/sle15sp5/* %{buildroot}/%{patdir}/%{c
 %attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15sp3/*
 %attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15sp4/*
 %attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15sp5/*
+%attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15sp6/*
 
 %changelog
 
