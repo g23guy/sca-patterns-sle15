@@ -1,4 +1,4 @@
- 
+#
 # spec file for package sca-patterns-sle15
 #
 # Copyright (c) 2024 SUSE LLC
@@ -12,6 +12,10 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
+#
+
+
 %define sca_common sca
 %define patdirbase /usr/lib/%{sca_common}
 %define patdir %{patdirbase}/patterns
@@ -20,21 +24,21 @@
 %define patmode 755
 %define category SLE
 
-Name:         sca-patterns-sle15
-Version:      1.5.8
-Release:      0
-Summary:      Supportconfig Analysis Patterns for SLE15
-License:      GPL-2.0
-URL:          https://github.com/g23guy/sca-patterns-sle15
-Group:        System/Monitoring
-Source:       %{name}-%{version}.tar.gz
-BuildRequires: fdupes
-Requires:     sca-patterns-base >= 1.5.0
-Buildarch:    noarch
+Name:           sca-patterns-sle15
+Version:        1.5.8
+Release:        0
+Summary:        Supportconfig Analysis Patterns for SLE15
+License:        GPL-2.0-only
+URL:            https://github.com/g23guy/sca-patterns-sle15
+Group:          System/Monitoring
+Source:         %{name}-%{version}.tar.gz
+BuildRequires:  fdupes
+Requires:       sca-patterns-base >= 1.5.0
+BuildArch:      noarch
 
 %description
 Supportconfig Analysis (SCA) patterns to identify known
-issues relating to all versions of SLE15. 
+issues relating to all versions of SUSE Linux Enterprise 15
 
 See %{_docdir}/sca-patterns-base/COPYING.GPLv2
 
@@ -87,4 +91,3 @@ install -m %{patmode} patterns/%{category}/sle15sp5/* %{buildroot}/%{patdir}/%{c
 %attr(%{patmode},%{patuser},%{patgrp}) %{patdir}/%{category}/sle15sp6/*
 
 %changelog
-
